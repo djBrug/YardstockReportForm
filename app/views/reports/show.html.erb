@@ -1,0 +1,40 @@
+<p>
+  <strong>Date:</strong>
+  <%= @report.date %>
+</p>
+
+<p>
+  <strong>Stockyard:</strong>
+  <%= @report.stockyard %>
+</p>
+
+<p>
+  <strong>Auction:</strong>
+  <%= @report.auction %>
+</p>
+
+<p>
+  <strong>Receipts:</strong>
+  <% @report.receipts %>
+  <strong>Week Old Receipts:</strong>
+  <% @report.weekOldReceipts %>
+  <strong>Year Old Receipts:</strong>
+  <% @report.yearOldReceipts %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <% @report.summary %>
+</p>
+
+<p>
+  <strong>Livestock:</strong>
+  <% @report.livestock %>
+</p>
+
+<p>
+  <strong>Source</strong>
+  <% @report.source %>
+</p>
+
+<%= link_to 'Back', articles_path %>
