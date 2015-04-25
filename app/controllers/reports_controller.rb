@@ -6,8 +6,8 @@ class ReportsController < ApplicationController
   def show
     @report = Report.find(params[:id])
 
-    @report = Report.as_json(include: accommodations)
-    render json: final_hash
+    render json: @report
+
   end
 
   def new
@@ -19,7 +19,7 @@ class ReportsController < ApplicationController
   end
 
   def create
-    @report = Report.new(article_params)
+    @report = Report.new(report_params)
 
     if @report.save
       redirect_to @report
@@ -31,7 +31,7 @@ class ReportsController < ApplicationController
   def update
     @report = Report.find(params[:id])
 
-    if @report.update(article_params)
+    if @report.update(report_params)
       redirect_to @report
     else
       render 'edit'
@@ -47,7 +47,8 @@ class ReportsController < ApplicationController
 
   private
     def report_params
-      params.require(:report).permit(:title, :text)
+      params.permit(:title, :date, :stockyard, :auction,
+      :receipts, :weekOldReceipts, :yearOldReceipts, :summary, :livestock,
+      :source)
     end
   end
-end

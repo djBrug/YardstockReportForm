@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  date: 2015-04-22
+  stockyard: MyString
+  auction: MyString
+  receipts: 1
+  weekOldReceipts: 1
+  yearOldReceipts: 1
+  summary: MyString
+  livestock: MyString
+  source: MyString
+
+two:
+  title: MyString
+  date: 2015-04-22
+  stockyard: MyString
+  auction: MyString
+  receipts: 1
+  weekOldReceipts: 1
+  yearOldReceipts: 1
+  summary: MyString
+  livestock: MyString
+  source: MyString

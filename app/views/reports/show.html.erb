@@ -1,4 +1,10 @@
 <p>
+  <strong>Title:</strong>
+  <%= @report.title %>
+</p>
+
+
+<p>
   <strong>Date:</strong>
   <%= @report.date %>
 </p>
@@ -37,4 +43,4 @@
   <% @report.source %>
 </p>
 
-<%= link_to 'Back', articles_path %>
+<%= link_to 'Back', reports_path %>
