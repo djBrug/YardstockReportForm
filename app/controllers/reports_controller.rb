@@ -4,7 +4,7 @@ class ReportsController < ApplicationController
   end
 
   def show
-    @report = Report.find(params[:id])
+    @report = Report.find(report_params[:id])
 
     render json: @report
 
@@ -12,14 +12,18 @@ class ReportsController < ApplicationController
 
   def new
     @report = Report.new
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @report }
+    end
   end
 
   def edit
-    @report = Report.find(params[:id])
+    @report = Report.find(report_params[:id])
   end
 
   def create
-    @report = Report.new(report_params)
+    @report = Report.create(report_params)
 
     if @report.save
       redirect_to @report
@@ -47,8 +51,8 @@ class ReportsController < ApplicationController
 
   private
     def report_params
-      params.permit(:title, :date, :stockyard, :auction,
+      params.permit(:title, :stockyard, :auction,
       :receipts, :weekOldReceipts, :yearOldReceipts, :summary, :livestock,
-      :source)
+      :source, :id)
     end
   end
