@@ -4,7 +4,7 @@ class ReportsController < ApplicationController
   end
 
   def show
-    @report = Report.find(report_params[:id])
+    @report = Report.find(params[:id])
 
     render json: @report
 
@@ -51,7 +51,7 @@ class ReportsController < ApplicationController
 
   private
     def report_params
-      params.permit(:title, :stockyard, :auction,
+      params.require(:report).permit(:title, :stockyard, :auction,
       :receipts, :weekOldReceipts, :yearOldReceipts, :summary, :livestock,
       :source, :id)
     end
