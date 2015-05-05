@@ -8,8 +8,6 @@
 #  adapter: sqlite3
 #  pool: 5
 #  timeout: 5000
-#
-# This comment should show up.
 
 development:
   adapter: postgresql
