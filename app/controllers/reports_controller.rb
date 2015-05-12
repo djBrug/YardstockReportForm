@@ -17,9 +17,11 @@ class ReportsController < ApplicationController
   def new
     @report = Report.new
 
-    dateString = params[:month] + "-" + params[:day] + "-" + params[:year]
+    #dateString = params[:year] + "-" + params[:month] + "-" + params[:day]
 
-    @report.date = Date.strptime(dateString, "%m-%d-%Y")
+    #@report.date = Date.strptime("05/15/2015", "%m/%d/%Y")
+
+    #@report.date = params[:date]
 
     respond_to do |format|
       format.html # new.html.erb
@@ -60,7 +62,7 @@ class ReportsController < ApplicationController
 
   private
     def report_params
-      params.require(:report).permit(:title, :stockyard, :auction,
+      params.require(:report).permit(:title, :date, :stockyard, :auction,
       :receipts, :weekOldReceipts, :yearOldReceipts, :summary, :livestock,
       :source, :id)
     end
