@@ -21,7 +21,7 @@ class ReportsController < ApplicationController
 
     #@report.date = Date.strptime("05/15/2015", "%m/%d/%Y")
 
-    @report.date = params[:date]
+    #@report.date = params[:date]
 
     respond_to do |format|
       format.html # new.html.erb
