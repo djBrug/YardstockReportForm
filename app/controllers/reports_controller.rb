@@ -30,7 +30,7 @@ class ReportsController < ApplicationController
   end
 
   def edit
-    @report = Report.find(report_params[:id])
+    @report = Report.find(params[:id])
   end
 
   def create
