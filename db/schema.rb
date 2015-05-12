@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20150422213126) do
 
   create_table "reports", force: :cascade do |t|
     t.string   "title"
-    t.string   "date"
+    t.date     "date"
     t.string   "stockyard"
     t.string   "auction"
     t.integer  "receipts"
