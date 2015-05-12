@@ -2,7 +2,7 @@ class CreateReports < ActiveRecord::Migration
   def change
     create_table :reports do |t|
       t.string :title
-      t.date   :date
+      t.string :date
       t.string :stockyard
       t.string :auction
       t.integer :receipts
