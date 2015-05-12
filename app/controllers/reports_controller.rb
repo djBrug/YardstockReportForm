@@ -17,7 +17,7 @@ class ReportsController < ApplicationController
   def new
     @report = Report.new
 
-    #dateString = params[:month] + "-" + params[:day] + "-" + params[:year]
+    dateString = params[:month] + "-" + params[:day] + "-" + params[:year]
 
     #@report.date = Date.strptime(dateString, "%m-%d-%Y")
 
